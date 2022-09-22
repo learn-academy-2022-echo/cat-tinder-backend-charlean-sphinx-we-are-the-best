@@ -1,24 +1,10 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+rails generate resource Cat name:string age:integer location:string anthem:string movie:string enjoys:text joke:string image:text
 
-Things you may want to cover:
+rails db:migrate
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+Add to seed file
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+rails db:seed

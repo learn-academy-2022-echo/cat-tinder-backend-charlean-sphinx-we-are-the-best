@@ -39,7 +39,9 @@ RSpec.describe "Cats", type: :request do
         }
       }
       post '/cats', params: cat_params
+
       cat = Cat.first
+
       json = JSON.parse(response.body).deep_symbolize_keys
       expect(response).to have_http_status(200)
       expect(Cat.count).to eq(1)
@@ -64,6 +66,7 @@ RSpec.describe "Cats", type: :request do
         }
       }
       post '/cats', params: cat_params
+
       cat = Cat.first
 
       patch "/cats/#{cat.id}", params: {
@@ -87,7 +90,6 @@ RSpec.describe "Cats", type: :request do
     end
   end
 
- 
   it 'cannot be created without a name' do
     cat_params = {
       cat: {
@@ -101,9 +103,9 @@ RSpec.describe "Cats", type: :request do
   end
 
   it 'cannot be updated without a name' do
-
+    
     cat = Cat.create(name: 'Dog', age:40, location:'Egypt' ,anthem:'Song', movie:'Movie', enjoys: "Atleast 10 letters", joke: 'Joke', image: 'https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1036&q=80')
-
+  
     cat_params = {
       cat:{
         image: 'two.com',
@@ -112,6 +114,7 @@ RSpec.describe "Cats", type: :request do
      }
 
     patch "/cats/#{cat.id}", params: cat_params
+
     expect(response.status).to eq 422
     
   end

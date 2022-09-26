@@ -47,16 +47,6 @@ cats = [{
 So I guess you must be the queen of hearts.",
     image:"https://cdna.artstation.com/p/marketplace/presentation_assets/000/449/870/large/file.jpg"
   },
-{
-    name: "Murray the Mummy",
-    age: 4805,
-    location:"Hotel Transylvania",
-    anthem:"I Wanna Dance With Somebody - Whitney Houston",
-    movie:"The Goonies",
-    enjoys: "I think the movie “Cars” has so much appeal because the cars speak to one another. You don’t get that with real cars.",
-    joke:"Do you like magic? Because ABRA-KA-DAYUM",
-    image:"https://i.pinimg.com/originals/7d/25/3c/7d253c463b0271f4310c06f729c6de0e.png"
-  },
 
 {
     name: "Toilet Paper Roll the 3rd",
